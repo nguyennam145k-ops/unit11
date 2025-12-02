@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài toán lãi mẹ đẻ lãi con</title>
+</head>
+<body>
+    <script>
+        function laimedelaicon(){
+            let P = +prompt("Nhập số tiền ban đầu (P):");
+            if(P<=5000){
+                alert("Vui lòng nhập số tiền lớn hơn 5000.");
+                laimedelaicon();
+                return;
+            }
+            let r = +prompt("Nhập lãi suất hàng năm (%):");
+            if(r<=0 || r>=100){
+                alert("Vui lòng nhập lãi suất hợp lệ .");
+                laimedelaicon();
+                return;
+            }
+            let t = +prompt("Nhập số năm muốn gửi (t):");
+            if(t<=0){
+                alert("Vui lòng nhập số năm lớn hơn 0.");
+                laimedelaicon();
+                return;
+            }
+            let A = P * Math.pow((1 + r / 100), t);
+            alert("Số tiền sau " + t + " năm là: " + A.toFixed(2));
+        }
+        laimedelaicon();
+    </script>
+</body>
+</html>

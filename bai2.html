@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giai thừa của 1 số nguyên dương
+    </title>
+</head>
+<body>
+    <script>
+        function GiaiThua(){
+            let N = +prompt("Nhập số N:");
+            let result = 1;
+            if (N<0){
+                alert("Vui lòng nhập số nguyên dương.");
+                GiaiThua();
+            }else if(N==0){
+            alert("Giai thừa của 0 là: 1");
+            }else{
+            for(let i=1; i<=N; i++){
+                result *= i;
+            }
+            alert("Giai thừa của " + N + " là: " + result);
+            
+        }
+    }        GiaiThua();
+    </script>
+</body>
+</html>
